@@ -137,7 +137,6 @@ class TrivickramChatBot {
             }
         });
 
-        // Quick reply buttons (delegated event handling)
         this.chatMessages.addEventListener('click', (e) => {
             if (e.target.classList.contains('quick-reply-btn')) {
                 const reply = e.target.textContent;
@@ -168,16 +167,12 @@ class TrivickramChatBot {
     }
 
     handleRecommendationClick(question) {
-        // Add user message
         this.addMessage(question, 'user');
         
-        // Hide recommendation buttons
         this.hideRecommendations();
         
-        // Show typing indicator
         this.showTypingIndicator();
 
-        // Get bot response with delay
         setTimeout(() => {
             const response = this.getIntelligentResponse(question);
             this.hideTypingIndicator();
@@ -197,18 +192,14 @@ class TrivickramChatBot {
         const message = this.messageInput.value.trim();
         if (!message || this.isTyping) return;
 
-        // Add user message
         this.addMessage(message, 'user');
         this.messageInput.value = '';
         this.updateSendButtonState();
 
-        // Hide recommendations if visible
         this.hideRecommendations();
 
-        // Show typing indicator
         this.showTypingIndicator();
 
-        // Get bot response with delay
         setTimeout(() => {
             const response = this.getIntelligentResponse(message);
             this.hideTypingIndicator();
@@ -226,14 +217,12 @@ class TrivickramChatBot {
 
         const normalizedMessage = message.toLowerCase().trim();
         
-        // Detect intent using keyword matching
         const detectedIntent = this.detectIntent(normalizedMessage);
         
         if (detectedIntent) {
             return this.generateIntentResponse(detectedIntent);
         }
 
-        // Try exact match from FAQs
         if (this.faqs[normalizedMessage]) {
             return {
                 text: this.faqs[normalizedMessage],
@@ -241,7 +230,6 @@ class TrivickramChatBot {
             };
         }
 
-        // Use Fuse.js for fuzzy matching
         if (this.fuse) {
             const results = this.fuse.search(normalizedMessage);
             
@@ -256,7 +244,6 @@ class TrivickramChatBot {
             }
         }
 
-        // Intelligent fallback with clarifying options
         return this.getAmbiguousResponseWithOptions(normalizedMessage);
     }
 
@@ -280,7 +267,6 @@ class TrivickramChatBot {
     }
 
     getAmbiguousResponseWithOptions(message) {
-        // Analyze the message for partial matches and suggest options
         const suggestions = [];
         
         if (message.includes('work') || message.includes('job') || message.includes('experience')) {
@@ -329,7 +315,7 @@ class TrivickramChatBot {
     }
 
     getAnswer(message) {
-        // This method is kept for backward compatibility but now uses getIntelligentAnswer
+        getIntelligentAnswer
         const response = this.getIntelligentAnswer(message);
         return response.text;
     }
@@ -354,7 +340,6 @@ class TrivickramChatBot {
         const messageBubble = document.createElement('div');
         messageBubble.className = 'message-bubble';
         
-        // Handle formatted text (preserve line breaks)
         if (text.includes('\n')) {
             messageBubble.innerHTML = text.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         } else {
@@ -368,7 +353,6 @@ class TrivickramChatBot {
         messageContent.appendChild(messageBubble);
         messageContent.appendChild(messageTime);
 
-        // Add quick replies for bot messages
         if (sender === 'bot' && quickReplies.length > 0) {
             const quickRepliesDiv = document.createElement('div');
             quickRepliesDiv.className = 'quick-replies';
@@ -391,39 +375,75 @@ class TrivickramChatBot {
     }
 
     handleQuickReply(reply) {
-        // Convert quick reply to a more natural question
-        const questionMap = {
-            'Show Projects': 'Show me his projects',
-            'Technical Skills': 'What are his technical skills',
-            'Achievements': 'Tell me about his achievements',
-            'GitHub Links': 'Can I see his GitHub profile',
-            'Tech Stack': 'What technologies did he use',
-            'Project Details': 'Tell me more about his projects',
-            'Resume': 'Can I see his resume',
-            'Portfolio': 'Show me his portfolio website',
-            'LinkedIn': 'What is his LinkedIn profile',
-            'Certifications': 'What certifications does he have',
-            'Experience': 'Tell me about his work experience',
-            'AWS Details': 'Tell me more about his AWS certification',
-            'Skills': 'What are his technical skills',
-            'See Projects': 'Show me his projects',
-            'Contact Info': 'How can I contact him',
-            'About Trivickram': 'Tell me about Trivickram',
-            'Tell me more!': 'Tell me more about that',
-            'What else?': 'What else can you tell me',
-            'More Projects': 'Tell me about more projects',
-            'Availability': 'Is he available for work'
-        };
+    const questionMap = {
+        'About Trivickram': 'Tell me about Trivickram',
+        'Who is Trivickram': 'Who is Trivickram',
+        'Introduce yourself': 'Introduce yourself',
+        'Background': 'What is his background',
+        'Education': 'What is his education',
+        'Where did he study': 'Tell me about his education',
+
+        'Projects': 'Show me his projects',
+        'Show Projects': 'Tell me about his projects',
+        'See Projects': 'Show me his projects',
+        'Project Details': 'Tell me more about his projects',
+        'More Projects': 'Tell me about more projects',
+        'Tech Stack': 'What technologies did he use',
+        'What did he build': 'Tell me about his projects',
+        'GitHub': 'Can I see his GitHub profile',
+        'GitHub Links': 'Show me his GitHub repositories',
+        'Portfolio': 'Show me his portfolio website',
+
+        'Skills': 'What are his technical skills',
+        'Technical Skills': 'List his technical skills',
+        'Programming Languages': 'Which programming languages does he know',
+        'Cloud Skills': 'What are his cloud computing skills',
+        'Tools': 'What tools does he use',
+        'Tech Expertise': 'What technologies does he work with',
+
+        'Certifications': 'What certifications does he have',
+        'AWS': 'Tell me about his AWS certification',
+        'AWS Details': 'More details on his AWS certification',
+        'Certificates': 'List his certifications',
+
+        'Achievements': 'Tell me about his achievements',
+        'Awards': 'What awards has he won',
+        'Hackathons': 'Has he participated in hackathons',
+        'Competitions': 'Has he won any competitions',
+        'Ranking': 'What ranks or achievements has he earned',
+
+        'Experience': 'Tell me about his work experience',
+        'Work Experience': 'What work experience does he have',
+        'Internships': 'Has he done any internships',
+        'Previous Jobs': 'Has he worked anywhere before',
+
+        'Contact': 'How can I contact him',
+        'Contact Info': 'Give me his contact details',
+        'LinkedIn': 'What is his LinkedIn profile',
+        'Email': 'What is his email',
+        'Phone': 'What is his phone number',
+        'Resume': 'Can I see his resume',
+        'Portfolio Website': 'Show me his portfolio website',
+        'Availability': 'Is he available for work',
+        'Hire': 'Can I hire him',
+        'Open to work': 'Is he open to opportunities',
+
+        'Tell me more!': 'Tell me more about that',
+        'What else?': 'What else can you tell me',
+        'Something interesting': 'Tell me a fun fact about him',
+        'Fun Fact': 'Tell me a fun fact',
+        'Joke': 'Can you tell me a joke',
+        'Hobbies': 'What are his hobbies',
+        'Strengths': 'What are his strengths',
+        'Weaknesses': 'What are his weaknesses'
+    };
 
         const question = questionMap[reply] || reply;
         
-        // Add user message
         this.addMessage(question, 'user');
         
-        // Show typing indicator
         this.showTypingIndicator();
 
-        // Get bot response with delay
         setTimeout(() => {
             const response = this.getIntelligentResponse(question);
             this.hideTypingIndicator();
@@ -437,20 +457,18 @@ class TrivickramChatBot {
     }
 
     scrollToBottom() {
-        // Use setTimeout to ensure the element is rendered before scrolling
+        
         setTimeout(() => {
             this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
         }, 10);
     }
 }
 
-// Initialize the chatbot when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     try {
         const chatBot = new TrivickramChatBot();
         console.log('TrivickramChatBot initialized successfully');
         
-        // Add welcome animation
         setTimeout(() => {
             const notificationDot = document.getElementById('notificationDot');
             if (notificationDot) {
@@ -463,7 +481,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Enhanced keyboard shortcuts
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         const chatWidget = document.querySelector('.chat-widget');
@@ -473,7 +490,6 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Handle window resize for mobile responsiveness
 window.addEventListener('resize', () => {
     const chatWindow = document.getElementById('chatWindow');
     if (chatWindow && window.innerWidth <= 480) {
