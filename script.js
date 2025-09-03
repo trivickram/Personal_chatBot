@@ -61,8 +61,8 @@ class TrivickramChatBot {
             contact: {
                 keywords: ['contact', 'reach', 'email', 'phone', 'linkedin', 'hire', 'connect'],
                 templates: [
-                    "Ready to connect? 🔗\n\n📧 **Email:** trivickrambaratam@gmail.com\n� **Phone:** +91 7780275446\n� **LinkedIn:** linkedin.com/in/trivickram\n💻 **GitHub:** github.com/trivickram\n🌐 **Portfolio:** trivickram.me\n\nResponse time: Faster than a React re-render! ⚡",
-                    "Let's get in touch! 📬\n• Email: trivickrambaratam@gmail.com (professional stuff)\n• Phone: +91 7780275446 (urgent matters)\n• LinkedIn: Connect for networking\n• GitHub: See the code magic\n\nWarning: May respond with excessive enthusiasm about AI! 🤖",
+                    "Ready to connect? 🔗\n\n📧 **Email:** trivickrambaratam@gmail.com\n📞 **Phone:** +91 7780275446\n🔗 **LinkedIn:** linkedin.com/in/trivickram\n💻 **GitHub:** github.com/trivickram\n🌐 **Portfolio:** trivickram.me\n\nResponse time: Faster than a React re-render! ⚡",
+                    "Let's get in touch! 📬\n• Email: trivickrambaratam@gmail.com (professional stuff)\n• Phone: +91 7780275446 (urgent matters)\n• LinkedIn: https://www.linkedin.com/in/trivickram/\n• GitHub: https://github.com/trivickram\n\nWarning: May respond with excessive enthusiasm about AI! 🤖",
                     "Contact info unlocked! 🔓\n\n📧 trivickrambaratam@gmail.com\n📞 +91 7780275446\n\nHe's probably debugging something right now, but always happy to chat about cool tech opportunities! 💬 Check his LinkedIn and GitHub too!"
                 ],
                 quickReplies: ['Resume', 'Portfolio', 'Availability']
