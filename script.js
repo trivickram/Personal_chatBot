@@ -86,6 +86,16 @@ class TrivickramChatBot {
                     "Certification status: ACHIEVED! ✅\n🌩️ AWS Cloud Practitioner → Cloud computing validated\n🧠 Stanford ML Course → AI knowledge certified\n🏅 Programming Contest → Skills proven\n\nCollects certificates like Pokémon cards, but nerdier! 🤓"
                 ],
                 quickReplies: ['AWS Details', 'Skills', 'Projects']
+            },
+
+            github: {
+                keywords: ['github', 'repositories', 'repo', 'repository', 'git', 'code repository'],
+                templates: [
+                    "🔥 **GitHub Profile:** https://github.com/trivickram\n\n**Recent Repositories:**\n🤖 Personal_chatBot (This very chatbot!)\n📧 Email-Generator (1k+ users, MIT License)\n🏥 Parkinsons-Disease-prediction (98.7% accuracy)\n🚀 AI-powered-Self-Healing-CI-CD-pipelines\n🌐 Portfolio (BSD License)\n\n**Total:** 25+ repositories and growing! 📈",
+                    "Welcome to the code museum! 🏛️\n\n**Profile:** https://github.com/trivickram\n**LinkedIn:** https://www.linkedin.com/in/trivickram/\n\n**Featured Projects:**\n• Personal_chatBot - JavaScript (Updated 2 min ago)\n• vit-bfhl-api - HTML (4 days ago)\n• Email-Generator - JavaScript, MIT License\n• Portfolio - HTML, 3 stars\n\nCommits almost daily! 💪",
+                    "Dive into Trivickram's coding universe! 🌌\n\nhttps://github.com/trivickram\n\n**Languages:** JavaScript, Python, HTML, TypeScript\n**Licenses:** MIT, BSD, Apache, GPL\n**Activity:** Fresh commits weekly\n**Highlights:** AI projects, web apps, cloud solutions\n\nWarning: May cause coding inspiration! 💡"
+                ],
+                quickReplies: ['Specific Repos', 'Live Demos', 'Tech Stack']
             }
         };
     }
@@ -392,6 +402,8 @@ class TrivickramChatBot {
         'What did he build': 'Tell me about his projects',
         'GitHub': 'Can I see his GitHub profile',
         'GitHub Links': 'Show me his GitHub repositories',
+        'Specific Repos': 'Show me his specific GitHub repositories',
+        'Live Demos': 'Show me his live project demos',
         'Portfolio': 'Show me his portfolio website',
 
         'Skills': 'What are his technical skills',

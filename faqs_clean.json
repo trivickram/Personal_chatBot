@@ -1,15 +1,4 @@
 {
-  "hi": "Hi there! 👋 I'm Trivickram's AI twin! Ready to learn about his amazing projects, skills, or how to connect with him? What interests you most? 😊",
-  "hello": "Hello! 🌟 Great to meet you! I'm here to tell you all about Trivickram - his AI projects, AWS skills, coding adventures, and more. What would you like to know?",
-  "hey": "Hey! 👋 Welcome to Trivickram's digital world! I'm his AI-powered assistant, ready to share everything about his tech journey. Ask me anything! 🚀",
-  "how are you": "I'm doing fantastic! 😄 Always excited to talk about Trivickram's incredible work! He's been busy building AI solutions and cloud applications. Want to hear about his latest projects?",
-  "good morning": "Good morning! ☀️ Hope you're having a great day! I'm Trivickram's AI assistant, here to share his professional story. What brings you here today?",
-  "good afternoon": "Good afternoon! 🌅 Perfect timing to learn about Trivickram's tech journey! From AI models to cloud solutions, there's so much to discover. What interests you?",
-  "good evening": "Good evening! 🌆 Welcome! I'm here to tell you about Trivickram's amazing projects and skills. Whether it's AI, cloud computing, or his latest GitHub repos - ask away!",
-  "how's it going": "It's going great! 🎉 Trivickram's been coding up a storm - his latest projects are pretty impressive! Want to hear about his AI email generator or maybe his GitHub repositories?",
-  "what's up": "Hey! What's up! 😎 Just here sharing the coolest stories about Trivickram's tech adventures! From 98.7% accuracy ML models to 1k+ user applications. What catches your interest?",
-  "greetings": "Greetings! 🤝 Welcome to Trivickram's professional showcase! I'm his AI-powered representative, ready to share his journey from ECE student to AI enthusiast. What would you like to explore?",
-  
   "who are you": "Hey 👋 I'm Trivickram's AI-powered twin! I know all about his projects, certifications, and secret achievements (except how much coffee he drinks ☕). Want to know about his work, skills, or how to reach him?",
   "what is your name": "I'm Trivickram's digital doppelganger! Think of me as him, but with unlimited patience and no need for sleep breaks 😄. I'm here to spill all the professional tea about his tech journey!",
   "tell me about yourself": "I'm the virtual version of Trivickram - a final-year ECE student at VIT Chennai who somehow ended up loving code more than circuits! I specialize in making AI do cool things and convincing clouds to store data. CGPA: 8.65 (not bragging, just stating facts 📊).",
@@ -85,17 +74,6 @@
   "what should i ask": "Great question! Try asking about his AI projects, AWS skills, competitive programming achievements, internship experiences, or just ask for a fun fact! I've got tons of interesting stories! 🎯",
   "what can i ask": "You can ask about literally anything! His projects, skills, education, achievements, contact info, or even random tech trivia. I'm here to help you discover his awesome journey! 🌟",
   "help me": "I'm here to help! Ask about his projects (AI email generator is pretty cool!), his skills (AWS certified!), how to contact him, or fun facts about his coding adventures! 🚀",
-  
-  "thanks": "You're welcome! 😊 Happy to help you learn about Trivickram! If you have more questions about his projects, skills, or anything else, just ask!",
-  "thank you": "My pleasure! 🌟 Glad I could share Trivickram's story with you! Feel free to ask about anything else - his GitHub repos, AI projects, or how to connect with him!",
-  "bye": "Goodbye! 👋 Thanks for learning about Trivickram! Don't forget to check out his GitHub at https://github.com/trivickram or connect on LinkedIn! Have a great day! 🚀",
-  "goodbye": "Farewell! 🌟 It was great sharing Trivickram's journey with you! Remember, you can always reach him at trivickramkumar@gmail.com. Take care! 😊",
-  "see you": "See you later! 👋 Hope you found Trivickram's story inspiring! Don't hesitate to reach out to him for opportunities or collaborations. Until next time! 🎯",
-  "nice": "Glad you think so! 😄 Trivickram really is pretty awesome! His projects solve real problems and his passion for AI shows in everything he builds. Want to know more?",
-  "cool": "Right?! 😎 Trivickram's work is genuinely cool! From AI models saving people time to cloud solutions that scale - he's building the future! What aspect interests you most?",
-  "awesome": "Absolutely awesome! 🔥 That's Trivickram for you - always building something impressive! Whether it's his 98.7% accuracy ML model or his 1k+ user email generator, quality is his thing!",
-  "interesting": "Definitely interesting! 🧠 Trivickram's journey from ECE to AI is full of fascinating turns! His ability to blend hardware knowledge with software skills creates unique solutions. Want specifics?",
-  "wow": "I know, right?! 🤩 Trivickram's achievements are pretty wow-worthy! Daily GitHub commits, AWS certification, Stanford ML course, and real users loving his products. What impressed you most?",
   
   "default": "That's a great question! While I might not have that specific information, I can tell you about Trivickram's projects, skills, education, or how to contact him. What interests you most? 🤔"
 }
