@@ -35,7 +35,7 @@ class TrivickramChatBot {
                     "Here's Trivickram: The ECE student who fell in love with algorithms more than circuits! 💕 Currently at VIT Chennai, building AI that actually works (revolutionary, I know). AWS certified and caffeine-powered! ☕",
                     "Trivickram's story: Started with electronics, got distracted by AI/ML, now builds cool stuff that 1000+ people use! 🚀 VIT Chennai student, competitive programming champion, and professional code wizard! 🧙‍♂️"
                 ],
-                quickReplies: ['Show Projects', 'Technical Skills', 'Achievements']
+                quickReplies: ['Show Projects', 'Technical Skills']
             },
             
             projects: {
